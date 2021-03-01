@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> {{ template_question }} </h1>
+<br>
+{% for answer in template_answers %}
+<p class="butt" style="text-align:center;">
+{% if template_line %}
+<a href="{{url_for('result',champ= answer[1] )}}" style="color:whitesmoke">{{ answer[0] }}</a>
+
+{% else %}
+<a href="{{url_for('champ_question',page=2, line=answer[1] )}}" style="color:whitesmoke">{{answer[0]}}</a>
+{% endif %}
+</p>
+{% endfor %}
+
+{% endblock %}
