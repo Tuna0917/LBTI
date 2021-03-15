@@ -2,17 +2,22 @@
 
 {% block content %}
 
-<h1> {{ template_question }} </h1>
+<h1> {{ template_question[0] }} </h1>
 <br>
-{% for answer in template_answers %}
-<p class="butt" style="text-align:center;">
-{% if template_line %}
-<a href="{{url_for('result',champ= answer[1] )}}" style="color:whitesmoke">{{ answer[0] }}</a>
+<br>
 
-{% else %}
-<a href="{{url_for('champ_question',page=2, line=answer[1] )}}" style="color:whitesmoke">{{answer[0]}}</a>
-{% endif %}
-</p>
-{% endfor %}
+<div class="row">
+
+
+        <a href="{{url_for('question', page=template_page*2, q= template_q)}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[1] }}</div></a>
+
+    <br>
+    
+        <a href="{{url_for('question', page=1+template_page*2, q= template_q)}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[2] }}</div></a>
+    
+
+
+</div>
+<br></br>
 
 {% endblock %}

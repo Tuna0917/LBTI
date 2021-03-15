@@ -7,11 +7,9 @@
     <title>챔프추천</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <!--
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../static/css/main.css">
--->
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -19,16 +17,28 @@
 
 <body>
     <div class="container">
-        <div>
-            <a href=" {{ url_for('home') }} ">
-            <img class="logo" src="https://ifh.cc/g/J16s26.png" alt="League of Legends logo"/>
-            </a>
-        </div>
+            <div>
+                <a href=" {{ url_for('home') }} "><img class="logo" src="https://ifh.cc/g/J16s26.png" alt="League of Legends logo"/></a>
+            </div>
         <br>
-        <div class="texts">
-            {% block content %}
-            {% endblock %}
+
+        <div class="row">
+
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 texts">
+                <h2> LBTI </h2>
+
+                <div class="question">
+                    <a href = "{{ url_for('line_question', page = 1) }}">rea1ly 빈약한 초보자를 위한 LBTI 주저리주저리</a>
+                </div>
+
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+            
         </div>
+
     </div>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>

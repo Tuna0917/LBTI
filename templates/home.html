@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2> 아직 많이 빈약한 초보자를 위한 LBTI </h2>
-<p>
-<a href = "{{ url_for('line_question', page = 1) }}" style="color:whitesmoke">start</a>
-</p>
+<div class="mx-auto my-5 py-5 px-3">
+<h2> 초보자용 LBTI </h2>
+<img src="https://ifh.cc/g/uy3pMk.jpg">
+<br><br><br>
+<a href = "{{ url_for('question', page = 1, q= 1) }}">
+<div class="question">
+    시작
+</div>
+</a>
+</div>
+
 {% endblock %}
