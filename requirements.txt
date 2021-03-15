@@ -1,7 +1,5 @@
 appdirs==1.4.4
 appnope==0.1.2
-argon2-cffi==20.1.0
-async-generator==1.10
 attrs==20.3.0
 backcall==0.2.0
 bleach==3.2.3
@@ -22,12 +20,6 @@ itsdangerous==1.1.0
 jedi==0.18.0
 Jinja2==2.11.2
 jsonschema==3.2.0
-jupyter==1.0.0
-jupyter-client==6.1.11
-jupyter-console==6.2.0
-jupyter-core==4.7.0
-jupyterlab-pygments==0.1.2
-jupyterlab-widgets==1.0.0
 MarkupSafe==1.1.1
 mistune==0.8.4
 nbclient==0.5.1
