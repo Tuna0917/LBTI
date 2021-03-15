@@ -9,7 +9,7 @@ def home():
     return render_template("home.html")
 
 @app.route("/<int:q>/<int:page>/")
-def question(page:int, q:int):
+def question(page, q):
     if 2**(q-1)> page or page >= 2**q:
         return redirect(url_for('home'))
     if q==5:
@@ -24,7 +24,7 @@ def question(page:int, q:int):
         )
 
 @app.route("/result/<champ>/")
-def result(champ:str):
+def result(champ):
     return render_template("result.html", alignment = champions[champ])
 
 if __name__ == '__main__':
