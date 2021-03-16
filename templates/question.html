@@ -9,11 +9,11 @@
 <div class="row">
 
 
-        <a href="{{url_for('question', page=template_page*2, q= template_q)}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[1] }}</div></a>
+        <a href="{{url_for('question', page=template_page*2, q= template_q, answer = template_answer +0)}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[1] }}</div></a>
 
     <br>
     
-        <a href="{{url_for('question', page=1+template_page*2, q= template_q)}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[2] }}</div></a>
+        <a href="{{url_for('question', page=1+template_page*2, q= template_q, answer = template_answer +10**(template_q-2))}}"><div class="mx-auto my-5 py-5 px-3 question">{{ template_question[2] }}</div></a>
     
 
 

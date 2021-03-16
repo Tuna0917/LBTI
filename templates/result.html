@@ -2,17 +2,23 @@
 {% block content %}
 <div class="container">
     <div>
-        <h1> 당신은 {{ alignment[0] }}입니다. </h1>
+        <h2> 추천하는 챔피언은 {{ alignment[0] }}입니다. </h2>
     </div>
-<img style="width: 100%;height: auto;" src="{{alignment[1]}}" alt="{{alignment[2]}}"/>
-
-<p> {{ alignment[3] }} </p>
-<div>
-    <a href="{{url_for('home')}}">
+<img class="col-xs-12" src="{{alignment[1]}}" alt="{{alignment[2]}}"/>
+<br>
+<div class="col-lg-2 col-md-2"></div>
+<div class="col-lg-8 col-md-8">
+    <br><br>
+<h2> {{ answer }} </h2>
+<br> 
+<br> <a href="{{url_for('home')}}">
     <p class="question" >
         홈으로
     </p>
     </a>
 </div>
+<div class="col-lg-2 col-md-2"></div>
+<br>
+
 </div>
 {% endblock %}
