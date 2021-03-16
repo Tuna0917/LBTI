@@ -27,6 +27,8 @@ def question(page, q, answer):
 
 @app.route("/result/<champ>/<int:answer>")
 def result(champ,answer):
+    if not answer in [0,1,10,11,100,101,110,111,1000,1001,1010,1011,1100,1101,1110,1111]:
+        return redirect(url_for("home"))
     answer = '000'+str(answer)
     ans = ''
     for i,x in enumerate(reversed(answer)):
